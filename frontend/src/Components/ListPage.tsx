@@ -23,7 +23,7 @@ const FirstSection = styled.div(
 `
 );
 
-const HeaderTextContainer = styled.div`
+export const HeaderTextContainer = styled.div`
   padding: 28px 0px;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@ const Content = styled.td`
   outline: none;
 `;
 
-const Title = styled.p`
+export const Title = styled.p`
   color: #ca2c92;
   font-size: 24px;
   font-weight: 800;
@@ -83,16 +83,18 @@ const Button = styled.button`
 export const ListPage = ({ column, data, title, description, image, openForm }) => {
   return (
     <ListContainer>
-      <FirstSection img={image}>
-        <HeaderTextContainer>
-          <div>
-            <Title>{title}</Title>
-            <Description>{description}</Description>
-          </div>
+      {title && (
+        <FirstSection img={image}>
+          <HeaderTextContainer>
+            <div>
+              <Title>{title}</Title>
+              <Description>{description}</Description>
+            </div>
+            {openForm && <Button onClick={openForm}>Add New </Button>}
+          </HeaderTextContainer>
+        </FirstSection>
+      )}
 
-          <Button onClick={openForm}>Add New </Button>
-        </HeaderTextContainer>
-      </FirstSection>
       <SecondSection>
         <Table>
           <HeaderRow>

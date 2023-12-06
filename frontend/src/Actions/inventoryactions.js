@@ -12,7 +12,6 @@ export const fetchAllItems = () => async (dispatch) => {
 
 export const addNewItem = (itemData) => async (dispatch) => {
   try {
-    console.log(itemData);
     const response = await fetch('/api/items', {
       method: 'POST',
       headers: {
@@ -20,9 +19,9 @@ export const addNewItem = (itemData) => async (dispatch) => {
       },
       body: JSON.stringify(itemData)
     });
-    console.log(response.status);
+
     const data = await response.json();
-    console.log(data);
+
     dispatch({ type: 'ADD_INVENTORY_SUCCESS', payload: data.allItems });
   } catch (error) {
     dispatch({ type: 'ADD_INVENTORY_FAILURE', payload: error });
