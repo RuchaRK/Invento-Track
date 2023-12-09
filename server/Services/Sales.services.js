@@ -2,10 +2,10 @@ const Sales = require("../models/sales.model");
 
 async function allSales() {
   try {
-    const allSales = Sales.find().populate("product", "name");
+    const allSales = await Sales.find().populate("product", "name");
     return allSales;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
 
@@ -16,7 +16,7 @@ async function addNewSales(saleData) {
     const sales = await allSales();
     return sales;
   } catch (error) {
-    console.log(error);
+    throw new Error(error);
   }
 }
 
