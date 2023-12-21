@@ -1,4 +1,3 @@
-import './App.css';
 import { Dashboard } from './Pages/Dashboard';
 import { routeName } from './App.routes';
 import { PageWrapper } from './Components/PageWrapper';
