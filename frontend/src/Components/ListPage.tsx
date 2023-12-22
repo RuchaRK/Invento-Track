@@ -66,6 +66,13 @@ export const Title = styled.p`
   font-weight: 800;
 `;
 
+const FilterContainer = styled.div`
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
 const Description = styled.p`
   color: #fff;
   font-size: 14px;
@@ -80,7 +87,7 @@ const Button = styled.button`
   border: 3.5px solid #ca2c92;
 `;
 
-export const ListPage = ({ column, data, title, description, image, openForm }) => {
+export const ListPage = ({ column, data, title, filter, description, image, openForm }) => {
   return (
     <ListContainer>
       {title && (
@@ -96,6 +103,7 @@ export const ListPage = ({ column, data, title, description, image, openForm }) 
       )}
 
       <SecondSection>
+        <FilterContainer>{filter && filter}</FilterContainer>
         <Table>
           <HeaderRow>
             {column.map((header) => (

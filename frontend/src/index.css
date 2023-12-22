@@ -60,6 +60,9 @@ button {
 button:hover {
   border-color: #ca2c92;
 }
+button:active {
+  border-color: #ca2c92;
+}
 button:focus,
 button:focus-visible {
   outline: 6px auto -webkit-focus-ring-color;
