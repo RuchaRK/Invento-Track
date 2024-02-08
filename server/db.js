@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const mongoURI = process.env.MANGODB;
+const mongoURI = process.env.MONGODB;
 console.log(mongoURI);
 mongoose
   .connect(mongoURI, {
