@@ -6,7 +6,7 @@ const {
   allInventoryItems,
   updateInventoryItem,
   deleteInventoryItem,
-} = require("../services/Inventory.services.js");
+} = require("../Services/Inventory.services.js");
 
 inventoryRouter.post("/", async (req, res) => {
   try {

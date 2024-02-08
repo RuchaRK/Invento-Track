@@ -5,7 +5,7 @@ const {
   allSales,
   addNewSales,
   deleteSale,
-} = require("../services/Sales.services");
+} = require("../Services/Sales.services");
 
 salesRouter.post("/", async (req, res) => {
   try {

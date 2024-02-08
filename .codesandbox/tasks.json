@@ -1,0 +1,56 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "y",
+      "command": "npm install"
+    },
+    {
+      "name": "npm run install-all",
+      "command": "npm run install-all"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "test": {
+      "name": "test",
+      "command": "yarn test"
+    },
+    "install-all": {
+      "name": "install-all",
+      "command": "yarn install-all"
+    },
+    "install:frontend": {
+      "name": "install:frontend",
+      "command": "yarn install:frontend"
+    },
+    "install:backend": {
+      "name": "install:backend",
+      "command": "yarn install:backend"
+    },
+    "start": {
+      "name": "start",
+      "command": "yarn start",
+      "runAtStart": true
+    },
+    "start:frontend": {
+      "name": "start:frontend",
+      "command": "yarn start:frontend"
+    },
+    "start:backend": {
+      "name": "start:backend",
+      "command": "yarn start:backend"
+    },
+    "npm run start": {
+      "name": "npm run start",
+      "command": "npm run start",
+      "runAtStart": true
+    },
+    "npm start": {
+      "name": "npm start",
+      "command": "npm start",
+      "runAtStart": true
+    }
+  }
+}
